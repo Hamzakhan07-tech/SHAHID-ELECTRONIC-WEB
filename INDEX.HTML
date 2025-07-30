@@ -4,20 +4,193 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shahid Electronic - Expert LED, UPS, Microwave Repair Services</title>
-  <meta name="description" content="Shahid Electronic offers top-class LED, LCD, Microwave, Stabilizer, and UPS repairing services in Pakistan. 100% guaranteed electronics service.">
-  <meta name="keywords" content="LED Repair, Microwave Repair, UPS Service, Stabilizer Repair, LCD Fix, Electronics Repair Pakistan">
+  <meta name="description" content="Shahid Electronic offers top-class LED, LCD, Microwave, Stabilizer, and UPS repairing services in Pakistan. 100% guaranteed electronics service with expert technicians and quality assurance.">
+  <meta name="keywords" content="LED Repair, Microwave Repair, UPS Service, Stabilizer Repair, LCD Fix, Electronics Repair Pakistan, Shahid Electronic, Home Appliances Fix, PCB Repair, Inverter Fix">
   <meta name="author" content="Shahid Electronic">
   <meta property="og:title" content="Shahid Electronic - Electronics Repair Experts">
-  <meta property="og:description" content="Master repairing services for LED, UPS, Microwave, Stabilizers & more.">
+  <meta property="og:description" content="Master repairing services for LED, UPS, Microwave, Stabilizers & more with 100% satisfaction guarantee.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shahidelectronic.com">
   <meta property="og:image" content="https://shahidelectronic.com/og-image.jpg">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Canonical URL -->
   <link rel="canonical" href="https://shahidelectronic.netlify.app/" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="STYLE.CSS">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0d1b2a;
+      color: white;
+      overflow-x: hidden;
+      position: relative;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1b263b;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 600;
+      color: #00b4d8;
+    }
+    .nav-toggle ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+    .nav-toggle a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .nav-toggle a:hover {
+      color: #00b4d8;
+    }
+    .menu-icon {
+      display: none;
+    }
+    .hero {
+      padding: 100px 40px;
+      text-align: center;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      position: relative;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+    .hero-text p {
+      font-size: 1.3rem;
+      color: #d1d1d1;
+      margin-bottom: 30px;
+    }
+    .book-btn {
+      background-color: #00b4d8;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+    .book-btn:hover {
+      background: #ffffff;
+      color: #00b4d8;
+      box-shadow: 0 0 20px #00b4d8;
+      transform: scale(1.05);
+    }
+    .image-placeholder {
+      margin-top: 40px;
+      width: 100%;
+      height: 350px;
+      background: linear-gradient(135deg, #1b263b, #415a77);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-size: 18px;
+      font-style: italic;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .cards-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
+      background: #1b263b;
+    }
+    .card {
+      background: #0d1b2a;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 180, 216, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 180, 216, 0.6);
+    }
+    .card h3 {
+      color: #00b4d8;
+      margin-bottom: 12px;
+    }
+    .card p {
+      color: #ccc;
+    }
+    footer {
+      background: #000814;
+      color: #ccc;
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+    .footer-column h4 {
+      margin-bottom: 15px;
+      color: #00b4d8;
+    }
+    .footer-column ul {
+      list-style: none;
+    }
+    .footer-column li {
+      margin-bottom: 8px;
+    }
+    .footer-column a {
+      text-decoration: none;
+      color: #ccc;
+      transition: color 0.3s ease;
+    }
+    .footer-column a:hover {
+      color: #00b4d8;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #00b4d8;
+    }
+    #bg-animated {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+  </style>
 </head>
 <body>
+<canvas id="bg-animated"></canvas>
   <header class="navbar">
     <div class="logo">Shahid Electronic</div>
     <nav class="nav-toggle" id="navToggle">
@@ -36,49 +209,112 @@
   <section class="hero">
     <div class="hero-text">
       <h1>Master in LED, Microwave, UPS, & Stabilizer Repairing</h1>
-      <p>Professional repairing services with 100% customer satisfaction!</p>
+      <p>Trusted electronics service with 20+ years of hands-on experience and expert diagnostics.</p>
+      <button class="book-btn" onclick="location.href='contact.html'">📅 Book a Repair Now</button>
     </div>
-<div class="big-carousel">
-  <div class="carousel-wrapper">
-    <img src="i (1).webp" alt="Slide 1" class="carousel-slide">
-    <img src="i (2).webp" alt="Slide 2" class="carousel-slide">
-    <img src="i.webp" alt="Slide 3" class="carousel-slide">
-  </div>
-</div>
+    <div class="image-placeholder">
+      Upload Your Featured Service Image Here (e.g. Shop Front, Repair in Action)
+    </div>
   </section>
 
   <section class="cards-section">
     <div class="card">
       <h3>LED / LCD Repairing</h3>
-      <p>We fix all LED and LCD screen issues with full guarantee.</p>
+      <p>From display issues to mainboard and backlight repairs, we provide complete LED/LCD panel solutions.</p>
     </div>
     <div class="card">
       <h3>Microwave Repair</h3>
-      <p>Microwave heating, circuit, or display problems? We fix it!</p>
+      <p>Whether it's magnetron failure, door switch, or circuit malfunction – we repair it with guaranteed parts.</p>
     </div>
     <div class="card">
-      <h3>UPS Services</h3>
-      <p>Inverter and UPS repair with expert diagnosis and tools.</p>
+      <h3>UPS & Inverter Services</h3>
+      <p>Expert repair for local and imported UPS units. We also handle inverter PCB and battery issues professionally.</p>
     </div>
     <div class="card">
       <h3>Stabilizer Repair</h3>
-      <p>All types of stabilizer servicing for homes and offices.</p>
+      <p>Our team handles servo-motor based, relay-based and digital stabilizers for homes and businesses.</p>
     </div>
   </section>
 
   <footer>
-    <div class="footer-links">
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="services.html">Services</a> |
-      <a href="contact.html">Contact</a>
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-    <div class="social-icons">
-      <a href="https://www.tiktok.com/@shahidusb?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://www.instagram.com/shahidelectronic" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://youtu.be/eC6EI_liKw8?si=6LS1ndb5yQpLvGJJ" target="_blank"><i class="fab fa-youtube"></i></a>
+    <div class="footer-column">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">LED/LCD Repair</a></li>
+        <li><a href="#">Microwave Fix</a></li>
+        <li><a href="#">UPS Inverter Repair</a></li>
+        <li><a href="#">Stabilizer Maintenance</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.tiktok.com/@shahidusb" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/shahidelectronic" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@shahidelectronic" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Shahid Electronic. All rights reserved. Designed for professional electronics service in Pakistan.
     </div>
     <p>&copy; 2025 Shahid Electronic. All rights reserved.</p>
   </footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navToggle").classList.toggle("active");
+}
+const canvas = document.getElementById("bg-animated");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let particlesArray = [];
+class Particle {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 2 + 1;
+    this.speedX = Math.random() * 1 - 0.5;
+    this.speedY = Math.random() * 1 - 0.5;
+  }
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+  }
+  draw() {
+    ctx.fillStyle = '#00b4d8';
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+function initParticles() {
+  particlesArray = [];
+  for (let i = 0; i < 100; i++) {
+    particlesArray.push(new Particle());
+  }
+}
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particlesArray.forEach(p => {
+    p.update();
+    p.draw();
+  });
+  requestAnimationFrame(animateParticles);
+}
+initParticles();
+animateParticles();
+</script>
 </body>
 </html>

@@ -4,12 +4,117 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Shahid Electronic</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="STYLE.CSS">
-  <link rel="stylesheet" href="SCRIPT.JS">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+    }
+    header.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #1e2a38;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .nav-toggle ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+    .nav-toggle ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-toggle ul li a:hover {
+      color: #00ffff;
+    }
+    .menu-icon i {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .cards-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 2rem;
+      padding: 0 2rem;
+    }
+    .card {
+      background-color: #1b2a40;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 255, 255, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+    }
+    footer {
+      background-color: #101820;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    .footer-links a {
+      color: #ccc;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: #00ffff;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #ccc;
+      font-size: 18px;
+    }
+    .social-icons a:hover {
+      color: #00ffff;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: #00ffff;
+      color: #001f3f;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      transition: 0.3s ease;
+      text-decoration: none;
+    }
+    .cta-button:hover {
+      background: #00bfbf;
+      color: #fff;
+      box-shadow: 0 0 20px #00ffff;
+    }
+    @media(max-width: 768px) {
+      .nav-toggle ul {
+        flex-direction: column;
+      }
+      .menu-icon i {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="navbar">
@@ -22,38 +127,42 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <div class="menu-icon" onclick="toggleMenu()">
+    <div class="menu-icon" onclick="document.getElementById('navToggle').classList.toggle('active')">
       <i class="fas fa-bars"></i>
     </div>
   </header>
 
   <main style="padding: 2rem; text-align: center;">
     <h1>About Shahid Electronic</h1>
-    <p style="max-width: 800px; margin: 1rem auto; font-size: 1.1rem; color: #ffffff;">
-      At <strong>Shahid Electronic</strong>, we specialize in expert-level repairs for:
+    <p style="max-width: 800px; margin: 1rem auto; font-size: 1.1rem;">
+      Welcome to <strong>Shahid Electronic</strong> – your one-stop destination for advanced electronic repair solutions. 
+      With decades of trusted service and modern tools, we bring life back to your devices.
     </p>
+
     <div class="cards-section">
       <div class="card">
-        <h3>LED / LCD</h3>
-        <p>Master repairing for all brands of LED & LCD TVs with screen, backlight, and board issues.</p>
+        <h3>LED / LCD Repair</h3>
+        <p>Expert solutions for display, backlight, and mainboard faults for all major TV brands.</p>
       </div>
       <div class="card">
-        <h3>Microwave</h3>
-        <p>We fix microwave heating issues, touch panel faults, and power failures with original parts.</p>
+        <h3>Microwave Oven</h3>
+        <p>From heating coil replacement to touch panel and transformer issues – fixed instantly.</p>
       </div>
       <div class="card">
-        <h3>Stabilizer</h3>
-        <p>Professional repair and rewiring services for domestic and industrial stabilizers.</p>
+        <h3>Stabilizer Service</h3>
+        <p>Rewinding, voltage testing, relay repairs for household & commercial stabilizers.</p>
       </div>
       <div class="card">
-        <h3>UPS</h3>
-        <p>Battery, charging board, and power supply repairs for home and commercial UPS systems.</p>
+        <h3>UPS & Inverters</h3>
+        <p>Power supply, battery charging, board component-level troubleshooting handled by pros.</p>
       </div>
     </div>
 
-    <p style="margin-top: 2rem; color: #666666; font-weight: 500;">
-      With years of experience and a commitment to quality, Shahid Electronic is your trusted repair partner.
+    <p style="margin-top: 2rem; color: #bbb; font-weight: 500; max-width: 900px; margin-inline: auto;">
+      Our dedicated engineers diagnose and repair with precision, offering transparent solutions that stand the test of time. Trusted by thousands, our journey reflects quality, honesty, and innovation.
     </p>
+
+    <a href="contact.html" class="cta-button">Book a Free Repair Assessment</a>
   </main>
 
   <footer>
