@@ -1,75 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services - Shahid Electronic</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="STYLE.CSS">
-  <link rel="stylesheet" href="SCRIPT.JS">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin: 40px 0 20px;
+      color: #4fc3f7;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 30px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transform: scale(0.9);
+      animation: popUp 1s ease forwards;
+      animation-delay: calc(var(--i) * 0.3s);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(120deg, transparent, rgba(0, 191, 255, 0.3), transparent);
+      transform: rotate(45deg);
+      animation: shine 3s linear infinite;
+    }
+
+    @keyframes shine {
+      0% { transform: rotate(45deg) translate(-100%, -100%); }
+      100% { transform: rotate(45deg) translate(100%, 100%); }
+    }
+
+    @keyframes popUp {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #4fc3f7;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #d0e9ff;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 10px 22px;
+      background: #03a9f4;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #0288d1;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 20px 15px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">Shahid Electronic</div>
-    <nav class="nav-toggle" id="navToggle">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="menu-icon" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </div>
-  </header>
+  <h1>Our Premium Repair Services</h1>
+  <div class="cards-container">
 
-  <main style="padding: 2rem; text-align: center;">
-    <h1>Our Repairing & Installation Services</h1>
-    <p style="max-width: 800px; margin: 1rem auto; font-size: 1.1rem; color: #555;">
-      We offer expert repairing and maintenance services for a wide range of electronics and home appliances.
-    </p>
-
-    <div class="cards-section">
-      <div class="card">
-        <h3>LED / LCD Repairing</h3>
-        <p>Backlight, screen, sound, power issues & board-level repairs for all LED & LCD brands.</p>
-      </div>
-      <div class="card">
-        <h3>Microwave Oven</h3>
-        <p>Heating coil, digital panel, timer & magnetron-related issues resolved quickly & efficiently.</p>
-      </div>
-      <div class="card">
-        <h3>Stabilizer Services</h3>
-        <p>Voltage regulation issues, rewinding & PCB board repair for domestic and industrial stabilizers.</p>
-      </div>
-      <div class="card">
-        <h3>UPS Repairing</h3>
-        <p>Battery charging problems, power backup failure, circuit & inverter board troubleshooting.</p>
-      </div>
+    <div class="card" style="--i:0">
+      <img src="https://avatars.mds.yandex.net/i?id=d92a0315e0708eec5ddfe182d014593c130c5177-4032228-images-thumbs&n=13" alt="LED Repair">
+      <h2>LED TV Repair</h2>
+      <p>Fix all LED display, screen, and power issues with expert service and guaranteed results.</p>
+      <a class="btn" href="https://wa.me/923215242091" target="_blank">Book LED Repair</a>
     </div>
 
-    <p style="margin-top: 2rem; font-weight: 500;">
-      Shahid Electronic provides doorstep service, quick diagnosis, original spare parts & affordable rates.
-    </p>
-  </main>
+    <div class="card" style="--i:1">
+      <img src="https://avatars.mds.yandex.net/i?id=ad64e2a8b95ebcab510cd462c43eb644ebcfece9-16440781-images-thumbs&n=13" alt="LCD Repair">
+      <h2>LCD TV Repair</h2>
+      <p>Expert repair of all LCD screen problems, backlight faults, and circuit issues at low cost.</p>
+      <a class="btn" href="https://wa.me/923215242091" target="_blank">Book LCD Repair</a>
+    </div>
 
-  <footer>
-    <div class="footer-links">
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="services.html">Services</a> |
-      <a href="contact.html">Contact</a>
+    <div class="card" style="--i:2">
+      <img src="https://avatars.mds.yandex.net/i?id=d122cedc1317bf27faedd808dbdebdd5bf966134-4291359-images-thumbs&n=13" alt="UPS Repair">
+      <h2>UPS / Inverter Repair</h2>
+      <p>UPS or inverter not working? We provide quick diagnosis, battery testing, and full service.</p>
+      <a class="btn" href="https://wa.me/923215242091" target="_blank">Book UPS Service</a>
     </div>
-    <div class="social-icons">
-      <a href="https://www.tiktok.com/@shahidelectronic" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://www.instagram.com/shahidelectronic" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://youtu.be/eC6EI_liKw8?si=6LS1ndb5yQpLvGJJ" target="_blank"><i class="fab fa-youtube"></i></a>
+
+    <div class="card" style="--i:3">
+      <img src="https://avatars.mds.yandex.net/i?id=012b7694cdceb17997c8b1c68013714a9ba09da5-5629755-images-thumbs&n=13" alt="Stabilizer Repair">
+      <h2>Stabilizer Repair</h2>
+      <p>Voltage fluctuation issues? We repair stabilizers with accurate calibration and testing.</p>
+      <a class="btn" href="https://wa.me/923215242091" target="_blank">Book Stabilizer Repair</a>
     </div>
-    <p>&copy; 2025 Shahid Electronic. All rights reserved.</p>
-  </footer>
+
+  </div>
 </body>
 </html>
