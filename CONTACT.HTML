@@ -1,140 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Shahid Electronic</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Shahid Electronic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #0077ff, #005dcc);
+      background: #0d1b2a;
       color: white;
     }
 
-    .contact-container {
-      max-width: 520px;
-      margin: 50px auto;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
+    section {
+      padding: 60px 20px;
     }
 
-    .contact-container h2 {
+    h2 {
+      color: #00b4d8;
       text-align: center;
-      margin-bottom: 25px;
-      color: #ffffff;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #1b263b;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 180, 216, 0.2);
     }
 
     .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 500;
+      position: relative;
+      margin-bottom: 25px;
     }
 
     .form-group input,
-    .form-group textarea {
+    .form-group textarea,
+    .form-group select {
       width: 100%;
       padding: 12px;
-      border: none;
-      border-radius: 10px;
-      font-size: 1rem;
-      color: #333;
+      background: transparent;
+      border: 2px solid #00b4d8;
+      border-radius: 8px;
+      color: rgb(29, 207, 53);
+      font-size: 16px;
+      outline: none;
     }
 
-    .form-group button {
-      background-color: #ffffff;
-      color: #0077ff;
+    .form-group label {
+      position: absolute;
+      left: 15px;
+      top: 13px;
+      background: #1b263b;
+      color: #00b4d8;
+      padding: 0 5px;
+      font-size: 14px;
+      pointer-events: none;
+      transition: 0.3s ease all;
+    }
+
+    .form-group input:focus + label,
+    .form-group textarea:focus + label,
+    .form-group select:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group textarea:not(:placeholder-shown) + label,
+    .form-group select:valid + label {
+      top: -10px;
+      left: 12px;
+      font-size: 13px;
+      color: #00b4d8;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      background: #00b4d8;
+      color: white;
       border: none;
-      padding: 12px 25px;
-      font-size: 1rem;
-      border-radius: 8px;
+      border-radius: 50px;
       cursor: pointer;
-      display: block;
-      margin: 0 auto;
-      transition: 0.3s ease;
+      transition: all 0.3s ease;
     }
 
-    .form-group button:hover {
-      background-color: #e6e6e6;
+    button[type="submit"]:hover {
+      background: white;
+      color: #00b4d8;
+      box-shadow: 0 0 20px #00b4d8;
     }
 
-    .contact-info {
-      margin-top: 30px;
+    footer {
+      margin-top: 50px;
       text-align: center;
-    }
-
-    .contact-info .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-size: 1rem;
-      text-decoration: none;
-      color: #0077ff;
-      background-color: #fff;
-      transition: background 0.3s ease;
-    }
-
-    .contact-info .btn:hover {
-      background-color: #e6e6e6;
-    }
-
-    @media (max-width: 600px) {
-      .contact-container {
-        margin: 20px;
-      }
+      color: #aaa;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <div class="contact-container">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
-      <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" required />
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="text" id="phone" required />
-      </div>
-      <div class="form-group">
-        <label for="message">Your Message</label>
-        <textarea id="message" rows="4" required></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit">Send via WhatsApp</button>
-      </div>
-    </form>
 
-    <div class="contact-info">
-      <a href="tel:+923215242091btn">📞 Call Us</a>
-      <a href="https://wa.me/923215242091"_blank" class="btn">💬 WhatsApp Us</a>
+<section>
+  <h2>Book a Repair – Trusted & Transparent Service</h2>
+
+  <form id="whatsappForm">
+
+    <div class="form-group">
+      <input type="text" id="name" name="name" required placeholder=" " />
+      <label for="name">Your Name</label>
     </div>
-  </div>
 
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function (e) {
-      e.preventDefault();
+    <div class="form-group">
+      <input type="tel" id="phone" name="phone" required placeholder=" " />
+      <label for="phone">Phone Number</label>
+    </div>
 
-      const name = document.getElementById('name').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const message = document.getElementById('message').value.trim();
+    <div class="form-group">
+      <select id="service" name="service" required>
+        <option value="" disabled selected>Select Service</option>
+        <option value="LED / LCD Repair">LED / LCD Repair</option>
+        <option value="Microwave Repair">Microwave Repair</option>
+        <option value="UPS / Inverter Repair">UPS / Inverter Service</option>
+        <option value="Stabilizer Repair">Stabilizer Repair</option>
+        <option value="Other">Other</option>
+      </select>
+      <label for="service">Service Type</label>
+    </div>
 
-      const fullMessage = `🔹 New Inquiry 🔹%0A%0A👤 Name: ${name}%0A📞 Phone: ${phone}%0A📝 Message: ${message}`;
-      const whatsappNumber = '923215242091'
-      const whatsappLink = `https://wa.me/$03215242091}?text=${encodeURIComponent(fullMessage)}`;
+    <div class="form-group">
+      <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+      <label for="message">Brief Issue Description</label>
+    </div>
 
-      window.open(whatsappLink, '_blank');
-    });
-  </script>
+    <button type="submit">Submit via WhatsApp</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 Shahid Electronic. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById('whatsappForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const service = document.getElementById('service').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !phone || !service || !message) {
+      alert('Please fill all fields.');
+      return;
+    }
+
+    const fullMessage =
+      `New Repair Request – Shahid Electronic` +  
+
+      `Name: ${name}` +
+
+      `Phone: ${phone}` +
+
+      `Service Required: ${service}` +
+
+      `Problem Description: ${message}` +
+
+      `Requested via Website Contact Form` +
+      
+      ` Transparent & Honest Repair Guarantee`;
+
+    const whatsappURL = `https://wa.me/923215242091?text=${encodeURIComponent(fullMessage)}`;
+
+    window.open(whatsappURL, '_blank');
+    alert('Request sent successfully. Opening WhatsApp...');
+    document.getElementById('whatsappForm').reset();
+  });
+</script>
+
 </body>
 </html>
